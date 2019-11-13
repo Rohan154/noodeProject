@@ -1,0 +1,354 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "swagger REST API with CRUD",
+        "title": " find near By service Provider API"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/customer/register": {
+            "post": {
+                "description": "register for customer",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "first_name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "last_name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "latitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "longitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "area",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully registered the data"
+                    }
+                }
+            }
+        },
+        "/customer/login": {
+            "post": {
+                "description": "provide email and password to login",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully logged in ...."
+                    }
+                }
+            }
+        },
+        "/customer/update": {
+            "put": {
+                "description": "update the existing details",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "first_name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "last_name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "latitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "longitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "area",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "id",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully updated the data"
+                    }
+                }
+            }
+        },
+        "/customer/searchSP/{id}": {
+            "get": {
+                "summary": "find a Service Provider with customerId",
+                "description": "returns a Service Provider from particular customerId",
+                "operationId": "getSPById",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "nearest service provider to be returned",
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        },
+
+        
+        "/serviceProvider/register": {
+            "post": {
+                "description": "register for customer",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "area",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "latitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "longitude",
+                        "required": "true"
+                    }
+                
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully registered the data"
+                    }
+                }
+            }
+        },
+
+        "/serviceProvider/login": {
+            "post": {
+                "description": "enter the details to be logged in ",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully logged in ...."
+                    }
+                }
+            }
+        },
+
+        "/serviceProvider/update": {
+            "put": {
+                "description": "update the existing details",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "area",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "latitude",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "longitude",
+                        "required": "true"
+                    },
+                  
+                    {
+                        "in": "formData",
+                        "name": "id",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully updated the data"
+                    }
+                }
+            }
+        },
+
+
+
+        "/admin/register": {
+            "post": {
+                "description": "register for admin",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    }
+                
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully registered the data"
+                    }
+                }
+            }
+        },
+          
+
+        "/admin/login": {
+            "post": {
+                "description": "enter the details to be logged in ",
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "email",
+                        "required": "true"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "password",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully logged in ...."
+                    }
+                }
+            }
+        },
+
+        "/admin/customers": {
+            "get": {
+                "description": "fetch the customer details ",
+                
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched in ...."
+                    }
+                }
+            }
+        },
+
+        "/admin/serviceProviders": {
+            "get": {
+                "description": "fetch the customer details ",
+                
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched in ...."
+                    }
+                }
+            }
+        }
+
+
+    }
+}
